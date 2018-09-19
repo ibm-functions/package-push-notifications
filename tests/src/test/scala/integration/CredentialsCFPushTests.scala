@@ -28,18 +28,18 @@ class CredentialsCFPushTests
     with TestHelpers
     with WskTestHelpers{
   val credentials = TestUtils.getVCAPcredentials("push-notifications-iam")
-  val appSecret = credentials.get("appSecret").toJson;
+  val appSecret = JsString(credentials.get("appSecret"));
   val credentialsUrl = credentials.get("url");
   val adminURL = credentials.get("admin_url");
   val apiHost = adminURL.split("/")(2);
-  val appGuid = credentialsUrl.split("/").last.toJson;
+  val appGuid = JsString(credentialsUrl.split("/").last);
 
   // action names
   val sendMessageName = "push-notifications/send-message"
   val webhookName = "push-notifications/webhook"
 
   // send-message variables
-  val messageUrl = "www.google.com".toJson;
+  val messageUrl = JsString("www.google.com");
   val messageText = JsString("""This is pushnotifications Testing""");
   val unicodeMessage = JsString("""\ue04a""");
   val accentMessage = JsString("""Máxima de 33 C and Mínima de 26 C""");
