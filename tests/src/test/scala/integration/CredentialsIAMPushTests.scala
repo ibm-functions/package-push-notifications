@@ -27,7 +27,7 @@ class CredentialsIAMPushTests
     extends PushNotificationsPackage
     with TestHelpers
     with WskTestHelpers{
-  val credentials = TestUtils.getVCAPcredentials("push-notifications-iam")
+  val credentials = TestUtils.getVCAPcredentials("imfpush")
   val iam_role_crn = credentials.get("iam_role_crn");
   val url = credentials.get("url");
   val iam_apikey_description = credentials.get("iam_apikey_description");

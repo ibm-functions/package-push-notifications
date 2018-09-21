@@ -27,7 +27,7 @@ class CredentialsCFPushTests
     extends PushNotificationsPackage
     with TestHelpers
     with WskTestHelpers{
-  val credentials = TestUtils.getVCAPcredentials("push-notifications-iam")
+  val credentials = TestUtils.getVCAPcredentials("imfpush")
   val appSecret = JsString(credentials.get("appSecret"));
   val credentialsUrl = credentials.get("url");
   val adminURL = credentials.get("admin_url");
