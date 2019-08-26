@@ -29,7 +29,6 @@
 *  @param {string} tagNames - Send notification to the devices that have subscribed to any of these tags. Eg -p tagNames "["tag1"]"
 
 *  @param {string} gcmTitleKey - Title for the android notification.
-*  @param {string} gcmChannel - Channel name for the android notification.
 *  @param {string} gcmCollapseKey - This parameter identifies a group of messages.
 *  @param {string} gcmCategory - The category identifier to be used for the interactive push notifications.
 *  @param {string} gcmIcon - Specify the name of the icon to be displayed for the notification. Make sure the icon is already packaged with the client application.
@@ -119,7 +118,7 @@ async function main(params) {
 
   // gcm settings
   const {
-    gcmTitleKey, gcmChannel, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive,
+    gcmTitleKey, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive,
     gcmSync, gcmVisibility, gcmCategory, gcmIcon,
   } = theParams;
 
@@ -243,9 +242,6 @@ async function main(params) {
 
   if (gcmTitleKey) {
     gcm.androidTitle = gcmTitleKey;
-  }
-  if (gcmChannel) {
-    gcm.androidChannel = gcmChannel;
   }
   if (gcmCollapseKey) {
     gcm.collapseKey = gcmCollapseKey;
