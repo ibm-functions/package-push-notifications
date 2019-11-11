@@ -17,7 +17,7 @@ IMAGE_TAG="nightly"
 
 #pull down images
 docker pull openwhisk/controller:${IMAGE_TAG}
-docker tag openwhisk/controller ${IMAGE_PREFIX}/controller
+docker tag openwhisk/controller:${IMAGE_TAG} ${IMAGE_PREFIX}/controller
 docker pull openwhisk/invoker
 docker tag openwhisk/invoker ${IMAGE_PREFIX}/invoker
 
