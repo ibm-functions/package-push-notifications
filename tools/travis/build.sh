@@ -13,9 +13,10 @@ UTILDIR="$ROOTDIR/../incubator-openwhisk-utilities"
 export OPENWHISK_HOME=$WHISKDIR
 
 IMAGE_PREFIX="testing"
+IMAGE_TAG="nightly"
 
 #pull down images
-docker pull openwhisk/controller
+docker pull openwhisk/controller:${IMAGE_TAG}
 docker tag openwhisk/controller ${IMAGE_PREFIX}/controller
 docker pull openwhisk/invoker
 docker tag openwhisk/invoker ${IMAGE_PREFIX}/invoker
