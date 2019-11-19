@@ -21,7 +21,7 @@
 *  @param {string} appGuid - appGuid to create webhook
 *  @param {string} appSecret - appSecret of the application
 *  @param {string} url - An optional URL that can be sent along with the alert. Eg : -p url "https:\\www.mycompany.com".
-*  @param {string} apiHost - An optional string that specifies the API host.  The default is 'mobile.ng.bluemix.net'.  Eg : -p apiHost "mobile.eu-gb.bluemix.net".
+*  @param {string} apiHost - An optional string that specifies the API host.  The default is 'mobile.ng.bluemix.net'.  Eg : -p apiHost "mobile.eu-gb.bluemix.net" for UK region, -p apiHost "jp-tok.imfpush.cloud.ibm.com" for Tokyo.
 *  @param {object} text - The notification message to be shown to the user. Eg: -p text "Hi ,OpenWhisk send a notification"
 *  @param {string} deviceIds - Send notification to the list of specified devices. Eg: -p deviceIds "["deviceID1"]"
 *  @param {object} platforms - Send notification to the devices of the specified platforms. 'A' for apple (iOS) devices and 'G' for google (Android) devices. Eg: -p platforms ["A"]
